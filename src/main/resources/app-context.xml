@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="std1" class="com.school.graduate.pojos.SchoolGraduate">
+		<property name="studentName" value="Bikash Ghimire"></property>
+		<property name="passedYear" value="2010"></property>
+		<property name="totalYearsAttended" value="10"></property>
+
+		<property name="schoolattended">
+			<map>
+				<entry key="kindergarden" value-ref="Sch1" />
+
+			</map>
+		</property>
+
+	</bean>
+	<bean id="Sch1" class="com.school.graduate.pojos.School">
+		<property name="principalName" value="Mina Sharma"></property>
+		<property name="schoolAddress" value="Itahari,Halgada"></property>
+		<property name="phoneNo" value="2534343776"></property>
+		<property name="establishDate" value="1995"></property>
+
+	</bean>
+</beans>
